@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/login_nav">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/home_nav"
         android:name="com.uncannyvalley.mentora.presentation.HomeFragment"
         android:label="@string/nav_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_favourites"
+        android:id="@+id/favourites_nav"
         android:name="com.uncannyvalley.mentora.presentation.FavouritesFragment"
         android:label="@string/nav_favourites"
         tools:layout="@layout/fragment_favourites" />
 
     <fragment
-        android:id="@+id/navigation_profile"
+        android:id="@+id/profile_nav"
         android:name="com.uncannyvalley.mentora.presentation.ProfileFragment"
         android:label="@string/nav_profile"
         tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/login_nav"
+        android:name="com.uncannyvalley.mentora.presentation.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/home_nav"
+            app:popUpTo="@id/login_nav"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
