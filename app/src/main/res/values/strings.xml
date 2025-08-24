@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Mentora</string>
 
+    <!-- Bottom Navigation Labels -->
+    <string name="nav_home">Home</string>
+    <string name="nav_favourites">Favourites</string>
+    <string name="nav_profile">Profile</string>
+
     <!-- Home Screen -->
     <string name="btn_funnel">Filter button</string>
     <string name="sort_by_date">Sort by date</string>
