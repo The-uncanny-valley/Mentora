@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Mentora</string>
+
+    <!-- Home Screen -->
+    <string name="btn_funnel">Filter button</string>
+    <string name="sort_by_date">Sort by date</string>
+    <string name="search_courses">Search courses…</string>
+
+</resources>

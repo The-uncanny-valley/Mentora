@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="16dp"
+    tools:background="@color/background_surface"
+    tools:context=".presentation.HomeFragment">
+
+    <!-- Search bar -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_layout"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:hint="@string/search_courses"
+        android:maxWidth="240dp"
+        android:minWidth="88dp"
+        android:textColorHint="@color/on_surface_variant"
+        app:boxBackgroundColor="@color/surface"
+        app:boxCornerRadiusBottomEnd="28dp"
+        app:boxCornerRadiusBottomStart="28dp"
+        app:boxCornerRadiusTopEnd="28dp"
+        app:boxCornerRadiusTopStart="28dp"
+        app:boxStrokeColor="@color/surface"
+        app:cursorColor="@color/primary"
+        app:endIconTint="@color/on_surface"
+        app:hintTextColor="@color/primary"
+        app:layout_constraintEnd_toStartOf="@+id/btn_filter"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconCheckable="false"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/on_surface">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/roboto_regular"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:maxLength="20"
+            android:paddingStart="48dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/on_surface"
+            android:textIsSelectable="false"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Filter button -->
+    <ImageButton
+        android:id="@+id/btn_filter"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bg_round_button"
+        android:contentDescription="@string/btn_funnel"
+        android:src="@drawable/ic_funnel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/search_layout"
+        app:layout_constraintTop_toTopOf="@+id/search_layout" />
+
+    <!-- Sort by date -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sort"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/sort_by_date"
+        android:textColor="@color/primary"
+        android:textSize="12sp"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/ic_arrow_down_up"
+        app:iconGravity="textEnd"
+        app:iconPadding="4dp"
+        app:iconTint="@color/primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_filter"
+        app:rippleColor="@android:color/transparent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_courses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sort" />
+</androidx.constraintlayout.widget.ConstraintLayout>
