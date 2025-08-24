@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Mentora</string>
+    <string name="app_name" translatable="false">Mentora</string>
 
     <!-- Bottom Navigation Labels -->
     <string name="nav_home">Home</string>
@@ -26,8 +26,8 @@
     <!-- Login Screen -->
     <string name="login_title">Login</string>
 
-    <string name="login_label_email">Email</string>
-    <string name="login_email_hint">example@gmail.com</string>
+    <string name="login_label_email" translatable="false">Email</string>
+    <string name="login_email_hint" translatable="false">example@gmail.com</string>
 
     <string name="login_label_password">Password</string>
     <string name="login_password_hint">Enter password</string>
@@ -38,12 +38,11 @@
     <string name="login_error_invalid_password">Password must be >5 characters</string>
     <string name="login_error_failed">Login failed</string>
 
-    <string name="login_no_account">Sign up</string>
-    <string name="login_register">Register</string>
+    <string name="login_no_account">No account?</string>
+    <string name="login_register">Sign up</string>
     <string name="login_forgot_password">Forgot password?</string>
 
     <string name="login_with_vk">Log in with VK</string>
     <string name="login_with_ok">Log in with Odnoklassniki</string>
-
 
 </resources>

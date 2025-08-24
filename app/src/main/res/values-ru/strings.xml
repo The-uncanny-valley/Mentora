@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Bottom Navigation Labels -->
+    <string name="nav_home">Главная</string>
+    <string name="nav_favourites">Избранное</string>
+    <string name="nav_profile">Аккаунт</string>
+
+    <!-- Home Screen -->
+    <string name="btn_funnel">Фильтр</string>
+    <string name="sort_by_date">По дате добавления</string>
+    <string name="search_courses">Найти курс</string>
+
+    <!-- Course Item -->
+    <string name="course_title_placeholder">Название курса</string>
+    <string name="course_description_placeholder">Описание курса</string>
+    <string name="course_date_placeholder">Дата добавления курса</string>
+    <string name="course_price_placeholder">Цена</string>
+    <string name="course_rating_placeholder">Рейтинг</string>
+
+    <string name="course_learn_more">Подробнее</string>
+    <string name="course_favourite">Избранное</string>
+    <string name="course_illustration">Иллюстрация</string>
+    <string name="course_stars">Звёзд</string>
+
+    <!-- Login Screen -->
+    <string name="login_title">Вход</string>
+
+    <string name="login_label_password">Пароль</string>
+    <string name="login_password_hint">Введите пароль</string>
+
+    <string name="login_error_invalid_password">Пароль должен быть длиннее 5 символов</string>
+    <string name="login_error_invalid_email">Неверный email</string>
+    <string name="login_error_failed">Не удалось войти</string>
+
+    <string name="login_action_sign_in">Вход</string>
+
+    <string name="login_no_account">Нет аккаунта?</string>
+    <string name="login_register">Регистрация</string>
+    <string name="login_forgot_password">Забыл пароль</string>
+
+    <string name="login_with_vk">Войти через Вконтакте</string>
+    <string name="login_with_ok">Войти через Одноклассники</string>
+
+</resources>
