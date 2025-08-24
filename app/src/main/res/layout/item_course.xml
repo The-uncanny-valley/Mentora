@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface_variant"
+        android:padding="0dp">
+
+        <!-- Course Image -->
+        <ImageView
+            android:id="@+id/image_view_course_cover"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:contentDescription="@string/course_illustration"
+            android:scaleType="centerCrop"
+            android:src="@drawable/placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Bookmark button -->
+        <ImageButton
+            android:id="@+id/btn_favourite"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_glass"
+            android:contentDescription="@string/course_favourite"
+            android:padding="8dp"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintEnd_toEndOf="@id/image_view_course_cover"
+            app:layout_constraintTop_toTopOf="@id/image_view_course_cover"
+            app:tint="@color/on_surface" />
+
+        <LinearLayout
+            android:id="@+id/glass_overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_glass"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_course_cover"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/image_view_course_cover">
+
+            <!-- Star -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/course_stars"
+                android:src="@drawable/ic_star" />
+
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/text_view_course_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/roboto_regular"
+                android:text=""
+                android:textColor="@color/on_surface"
+                android:textSize="12sp"
+                tools:text="4.5" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/bg_glass"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_course_cover"
+            app:layout_constraintStart_toEndOf="@+id/glass_overlay">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/text_view_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/course_date_placeholder"
+                android:textColor="@color/on_surface"
+                android:textSize="12sp"
+                tools:text="May 24, 2025" />
+
+        </FrameLayout>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/text_view_course_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp"
+            android:text="@string/course_title_placeholder"
+            android:textColor="@color/on_surface"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_view_course_cover"
+            tools:text="Java-разработчик с нуля" />
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/text_view_course_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="2"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="4dp"
+            android:text="@string/course_description_placeholder"
+            android:textColor="@color/on_surface_variant"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_course_title"
+            tools:text="Освойте backend-разработку  и программирование на Java, фреймворки Spring и Maven, работу с базами данных и API" />
+
+        <!-- Price -->
+        <TextView
+            android:id="@+id/text_view_course_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="16dp"
+            android:text="@string/course_price_placeholder"
+            android:textColor="@color/on_surface"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_course_description"
+            tools:text="999 ₽" />
+
+        <!-- Learn More button -->
+        <LinearLayout
+            android:id="@+id/btn_learn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_course_description">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_semi_bold"
+                android:text="@string/course_learn_more"
+                android:textColor="@color/primary"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_marginStart="6dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_arrow_right"
+                app:tint="@color/primary" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

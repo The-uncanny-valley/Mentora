@@ -6,4 +6,16 @@
     <string name="sort_by_date">Sort by date</string>
     <string name="search_courses">Search courses…</string>
 
+    <!-- Course Item -->
+    <string name="course_title_placeholder">Course Title</string>
+    <string name="course_description_placeholder">Course Description</string>
+    <string name="course_date_placeholder">Date</string>
+    <string name="course_price_placeholder">Price</string>
+    <string name="course_rating_placeholder">Rating</string>
+
+    <string name="course_learn_more">Learn more</string>
+    <string name="course_favourite">Favourite</string>
+    <string name="course_illustration">Illustration</string>
+    <string name="course_stars">Stars</string>
+
 </resources>

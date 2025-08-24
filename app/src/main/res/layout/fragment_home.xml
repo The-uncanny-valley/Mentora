@@ -94,6 +94,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_course"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_sort" />
 </androidx.constraintlayout.widget.ConstraintLayout>
