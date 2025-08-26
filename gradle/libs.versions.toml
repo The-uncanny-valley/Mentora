@@ -1,5 +1,6 @@
 [versions]
 agp = "8.11.1"
+koinAndroid = "4.1.0"
 kotlin = "2.2.10"
 coreKtx = "1.17.0"
 junit = "4.13.2"
@@ -20,6 +21,7 @@ converterGson = "3.0.0"
 
 [libraries]
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }

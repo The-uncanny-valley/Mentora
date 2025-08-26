@@ -40,6 +40,8 @@ android {
 
 dependencies {
 
+    implementation(libs.koin.android)
+
     implementation(libs.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
 
