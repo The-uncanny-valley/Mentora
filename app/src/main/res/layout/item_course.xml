@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="16dp"
+    android:clickable="false"
+    android:focusable="false"
     app:cardCornerRadius="16dp"
     app:cardElevation="4dp">
 
@@ -14,31 +16,40 @@
         android:background="@color/surface_variant"
         android:padding="0dp">
 
-        <!-- Course Image -->
-        <ImageView
-            android:id="@+id/image_view_course_cover"
+        <FrameLayout
+            android:id="@+id/cover"
             android:layout_width="0dp"
             android:layout_height="180dp"
-            android:contentDescription="@string/course_illustration"
-            android:scaleType="centerCrop"
-            android:src="@drawable/placeholder"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <!-- Bookmark button -->
-        <ImageButton
-            android:id="@+id/btn_favourite"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="8dp"
-            android:background="@drawable/bg_glass"
-            android:contentDescription="@string/course_favourite"
-            android:padding="8dp"
-            android:src="@drawable/ic_bookmark"
-            app:layout_constraintEnd_toEndOf="@id/image_view_course_cover"
-            app:layout_constraintTop_toTopOf="@id/image_view_course_cover"
-            app:tint="@color/on_surface" />
+            <!-- Course Image -->
+            <ImageView
+                android:id="@+id/image_view_course_cover"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:clickable="false"
+                android:contentDescription="@string/course_illustration"
+                android:focusable="false"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder" />
+
+            <!-- Bookmark button -->
+            <ImageButton
+                android:id="@+id/btn_favourite"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_margin="8dp"
+                android:background="@drawable/bg_glass"
+                android:clickable="true"
+                android:contentDescription="@string/course_favourite"
+                android:elevation="8dp"
+                android:focusable="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_bookmark" />
+        </FrameLayout>
 
         <LinearLayout
             android:id="@+id/glass_overlay"
@@ -50,9 +61,9 @@
             android:orientation="horizontal"
             android:paddingHorizontal="6dp"
             android:paddingVertical="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_view_course_cover"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
             app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="@+id/image_view_course_cover">
+            app:layout_constraintStart_toStartOf="@+id/cover">
 
             <!-- Star -->
             <ImageView
@@ -82,7 +93,7 @@
             android:background="@drawable/bg_glass"
             android:paddingHorizontal="6dp"
             android:paddingVertical="4dp"
-            app:layout_constraintBottom_toBottomOf="@+id/image_view_course_cover"
+            app:layout_constraintBottom_toBottomOf="@+id/cover"
             app:layout_constraintStart_toEndOf="@+id/glass_overlay">
 
             <!-- Date -->
@@ -111,7 +122,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/image_view_course_cover"
+            app:layout_constraintTop_toBottomOf="@id/cover"
             tools:text="Java-разработчик с нуля" />
 
         <!-- Description -->
@@ -152,7 +163,7 @@
         <LinearLayout
             android:id="@+id/btn_learn_more"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
