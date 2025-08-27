@@ -6,10 +6,14 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.uncannyvalley.mentora.domain.model.Course
+import com.uncannyvalley.mentora.domain.repository.CourseRepository
 import com.uncannyvalley.mentora.domain.usecase.GetCoursesUseCase
 import kotlinx.coroutines.launch
 
-class CourseViewModel(private val getCoursesUseCase: GetCoursesUseCase) : ViewModel() {
+class CourseViewModel(
+    private val getCoursesUseCase: GetCoursesUseCase,
+    private val repository: CourseRepository
+) : ViewModel() {
 
     private val _courses = MutableLiveData<List<Course>>()
     val courses: LiveData<List<Course>> = _courses
@@ -26,6 +30,8 @@ class CourseViewModel(private val getCoursesUseCase: GetCoursesUseCase) : ViewMo
     }
 
     fun toggleLike(course: Course) {
+        repository.toggleLike(course.id)
+        
         val currentList = _courses.value ?: return
         val updatedList = currentList.map {
             if (it.id == course.id) it.copy(hasLike = !it.hasLike) else it

@@ -4,4 +4,5 @@ import com.uncannyvalley.mentora.domain.model.Course
 
 interface CourseRepository {
     suspend fun getCourses(): List<Course>
+    fun toggleLike(courseId: Int)
 }
