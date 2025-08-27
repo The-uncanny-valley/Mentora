@@ -31,6 +31,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+
     }
 
     buildFeatures {
@@ -46,6 +47,11 @@ kotlin {
 }
 
 dependencies {
+
+    // Coroutines + Lifecycle
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
 
     implementation(libs.koin.android)
 
