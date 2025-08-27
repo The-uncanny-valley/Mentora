@@ -41,4 +41,11 @@
     <string name="login_with_vk">Войти через Вконтакте</string>
     <string name="login_with_ok">Войти через Одноклассники</string>
 
+    <!-- Profile screen -->
+    <string name="profile_title_account">Профиль</string>
+
+    <string name="profile_your_courses">Ваши курсы</string>
+    <string name="profile_contact_us">Написать в поддержку</string>
+    <string name="profile_settings">Настройки</string>
+    <string name="profile_exit">Выйти из аккаунта</string>
 </resources>
