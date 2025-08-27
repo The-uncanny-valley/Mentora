@@ -9,7 +9,7 @@ data class CourseEntity(
     @PrimaryKey val id: Int,
     val title: String,
     val text: String,
-    val price: Double,
+    val price: Int,
     val rate: Double,
     val startDate: Date,
     val hasLike: Boolean,
