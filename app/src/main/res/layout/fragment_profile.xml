@@ -5,25 +5,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="36dp"
     tools:background="@color/background_surface">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginVertical="16dp"
         android:fontFamily="@font/roboto_regular"
-        android:padding="16dp"
         android:text="@string/profile_title_account"
         android:textAlignment="textStart"
         android:textColor="@color/on_background_surface"
-        android:textSize="28sp" />
+        android:textSize="32sp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_marginVertical="16dp"
         android:background="@drawable/bg_round"
-        android:paddingVertical="8dp"
         android:paddingStart="16dp"
         android:paddingEnd="12dp">
 
@@ -65,8 +65,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
         android:fontFamily="@font/roboto_regular"
-        android:padding="16dp"
         android:text="@string/profile_your_courses"
         android:textColor="@color/on_background_surface"
         android:textSize="28sp" />

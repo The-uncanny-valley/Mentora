@@ -17,7 +17,7 @@
         android:fontFamily="@font/roboto_regular"
         android:text="@string/login_title"
         android:textColor="@color/on_background_surface"
-        android:textSize="28sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/text_view_email"
         app:layout_constraintStart_toStartOf="@+id/text_view_email"
         app:layout_constraintTop_toTopOf="parent"

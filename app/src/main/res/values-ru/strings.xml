@@ -47,5 +47,6 @@
     <string name="profile_your_courses">Ваши курсы</string>
     <string name="profile_contact_us">Написать в поддержку</string>
     <string name="profile_settings">Настройки</string>
+    <string name="favourites">Избранное</string>
     <string name="profile_exit">Выйти из аккаунта</string>
 </resources>
