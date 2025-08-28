@@ -3,6 +3,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -47,6 +50,10 @@ kotlin {
 }
 
 dependencies {
+    implementation(libs.androidx.work.runtime.ktx)
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.android.compiler)
+    implementation(libs.androidx.hilt.work)
 
     // Coroutines + Lifecycle
     implementation(libs.kotlinx.coroutines.android)
@@ -57,6 +64,8 @@ dependencies {
 
     implementation(libs.room.runtime)
     annotationProcessor(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.work.runtime.ktx)
 
     implementation(libs.retrofit)
     implementation(libs.retrofit2.converter.gson)

@@ -10,8 +10,8 @@ appcompat = "1.7.1"
 kotlinxCoroutinesAndroid = "1.10.2"
 material = "1.12.0"
 constraintlayout = "2.2.1"
-lifecycleLivedataKtx = "2.9.2"
-lifecycleViewmodelKtx = "2.9.2"
+lifecycleLivedataKtx = "2.9.3"
+lifecycleViewmodelKtx = "2.9.3"
 navigationFragmentKtx = "2.9.3"
 navigationUiKtx = "2.9.3"
 annotation = "1.9.1"
@@ -19,9 +19,13 @@ roomCompiler = "2.7.2"
 roomRuntime = "2.7.2"
 retrofit = "3.0.0"
 converterGson = "3.0.0"
+hiltAndroid = "2.57.1"
+hiltWork = "1.2.0"
+workRuntimeKtx = "2.10.3"
 
 [libraries]
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 koin-android = { module = "io.insert-koin:koin-android", version.ref = "koinAndroid" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
 room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
@@ -39,8 +43,14 @@ androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 retrofit2-converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
+androidx-hilt-work = { module = "androidx.hilt:hilt-work", version.ref = "hiltWork" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomCompiler" }
 
 [plugins]
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+hilt = { id = "com.google.dagger.hilt.android", version = "2.57.1" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-
+ksp = { id = "com.google.devtools.ksp", version = "2.2.10-2.0.2" }
