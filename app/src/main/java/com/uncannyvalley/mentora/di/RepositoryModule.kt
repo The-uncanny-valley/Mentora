@@ -5,5 +5,5 @@ import com.uncannyvalley.mentora.domain.repository.CourseRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single<CourseRepository> { CourseRepositoryImpl(get()) }
+    single<CourseRepository> { CourseRepositoryImpl(get(), get()) } // api, dao
 }

@@ -1,6 +1,7 @@
 package com.uncannyvalley.mentora
 
 import android.app.Application
+import com.uncannyvalley.mentora.di.databaseModule
 import com.uncannyvalley.mentora.di.networkModule
 import com.uncannyvalley.mentora.di.repositoryModule
 import com.uncannyvalley.mentora.di.useCaseModule
@@ -17,6 +18,7 @@ class MentoraApplication : Application() {
             androidContext(this@MentoraApplication)
             modules(listOf(
                 networkModule,
+                databaseModule,
                 repositoryModule,
                 useCaseModule,
                 viewModelModule)
