@@ -50,3 +50,20 @@ fun CourseEntity.toDomain(): Course {
         publishDate = publishDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
     )
 }
+
+fun CourseDto.toEntity(): CourseEntity {
+    val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+    val start = LocalDate.parse(startDate, formatter)
+    val publish = LocalDate.parse(publishDate, formatter)
+
+    return CourseEntity(
+        id = id,
+        title = title,
+        text = text,
+        price = price.replace(" ", "").toIntOrNull() ?: 0,
+        rate = rate.toDoubleOrNull() ?: 0.0,
+        startDate = Date.from(start.atStartOfDay(ZoneId.systemDefault()).toInstant()),
+        hasLike = hasLike,
+        publishDate = Date.from(publish.atStartOfDay(ZoneId.systemDefault()).toInstant())
+    )
+}
