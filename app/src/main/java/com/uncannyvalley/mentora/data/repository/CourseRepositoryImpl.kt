@@ -7,6 +7,7 @@ import com.uncannyvalley.mentora.data.mapper.toEntity
 import com.uncannyvalley.mentora.domain.model.Course
 import com.uncannyvalley.mentora.domain.repository.CourseRepository
 import kotlinx.coroutines.flow.first
+import java.lang.Exception
 
 class CourseRepositoryImpl(
     private val api: CourseApiService,
@@ -17,14 +18,22 @@ class CourseRepositoryImpl(
     private val likedCourseIds = mutableSetOf<Int>()
 
     override suspend fun getCourses(): List<Course> {
-        val remote = api.getCourses().courses // fetch remote
-        val entities = remote.map { it.toEntity() } // cache
-        dao.insertAll(entities)
-        // read from DB (sorted by publishDate desc) and map to domain
-        val cached = dao.getCoursesByPublishDateDesc().first().map { it.toDomain() }
+        return try {
+            // Try remote
+            val remote = api.getCourses().courses
+            val entities = remote.map { it.toEntity() } // cache
+            dao.insertAll(entities)
 
-        return cached.map { course ->
-            if (likedCourseIds.contains(course.id)) course.copy(hasLike = true) else course
+            dao.getCoursesByPublishDateDesc().first().map { it.toDomain() }
+                .map { course ->
+                    if (likedCourseIds.contains(course.id)) course.copy(hasLike = true) else course
+                }
+        } catch (e: Exception) {
+            // If offline
+            dao.getCoursesByPublishDateDesc().first().map { it.toDomain() }
+                .map { course ->
+                    if (likedCourseIds.contains(course.id)) course.copy(hasLike = true) else course
+                }
         }
     }
 
