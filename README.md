@@ -44,7 +44,13 @@ It showcases modern Android development practices such as dependency injection, 
 
 ## Screenshots
 
-
+<table>
+  <tr>
+    <td><img src="media/fragment_login.png" width="200"/></td>
+    <td><img src="media/fragment_home.png" width="200"/></td>
+   <td><img src="media/fragment_favourites.png" width="200"/></td>
+  </tr>
+</table>
 
 ## Project Structure
 
