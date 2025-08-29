@@ -13,7 +13,7 @@
     <!-- Course Item -->
     <string name="course_title_placeholder">Название курса</string>
     <string name="course_description_placeholder">Описание курса</string>
-    <string name="course_date_placeholder">Дата добавления курса</string>
+    <string name="course_date_placeholder">Дата начала курса</string>
     <string name="course_price_placeholder">Цена</string>
     <string name="course_rating_placeholder">Рейтинг</string>
 

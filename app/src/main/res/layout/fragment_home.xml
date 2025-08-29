@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingHorizontal="16dp"
-    android:paddingTop="38dp"
+    android:paddingTop="46dp"
     tools:background="@color/background_surface"
     tools:context=".presentation.ui.home.HomeFragment">
 
@@ -71,9 +71,11 @@
         android:id="@+id/btn_sort"
         style="@style/Widget.MaterialComponents.Button.TextButton"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/sort_by_date"
         android:textColor="@color/primary"
@@ -95,8 +97,8 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:itemCount="2"
-        tools:listitem="@layout/item_course"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_sort" />
+        app:layout_constraintTop_toBottomOf="@id/btn_sort"
+        tools:itemCount="2"
+        tools:listitem="@layout/item_course" />
 </androidx.constraintlayout.widget.ConstraintLayout>

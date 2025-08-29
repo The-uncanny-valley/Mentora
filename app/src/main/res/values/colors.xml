@@ -7,6 +7,7 @@
     <!-- Primary Brand -->
     <color name="primary">#12B956</color>
     <color name="on_primary">#F2F2F3</color>
+    <color name="inactive">#0C6D33</color>
 
     <!-- Bottom navigation + card background -->
     <color name="surface">#24252A</color>
