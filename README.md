@@ -36,7 +36,7 @@ It showcases modern Android development practices such as dependency injection, 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/mentora.git
+   git clone https://github.com/The-uncanny-valleu/Mentora.git
    cd mentora
    ```
 2. Open the project in **Android Studio** (latest version recommended).
