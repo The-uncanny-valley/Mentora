@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/home_nav"
-        android:name="com.uncannyvalley.mentora.presentation.HomeFragment"
+        android:name="com.uncannyvalley.mentora.presentation.ui.home.HomeFragment"
         android:label="@string/nav_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/favourites_nav"
-        android:name="com.uncannyvalley.mentora.presentation.FavouritesFragment"
+        android:name="com.uncannyvalley.mentora.presentation.ui.favourites.FavouritesFragment"
         android:label="@string/nav_favourites"
         tools:layout="@layout/fragment_favourites" />
 
     <fragment
         android:id="@+id/profile_nav"
-        android:name="com.uncannyvalley.mentora.presentation.ProfileFragment"
+        android:name="com.uncannyvalley.mentora.presentation.ui.profile.ProfileFragment"
         android:label="@string/nav_profile"
         tools:layout="@layout/fragment_profile" />
 

@@ -1,4 +1,4 @@
-package com.uncannyvalley.mentora.presentation
+package com.uncannyvalley.mentora.presentation.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
