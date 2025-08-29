@@ -20,6 +20,8 @@ It showcases modern Android development practices such as dependency injection, 
     * **Home**
     * **Favourites**
     * **Profile** (UI only, not functional)
+* Localization
+  * Available in English and Russian 🇬🇧🇷🇺
 
 ## Tech Stack
 
