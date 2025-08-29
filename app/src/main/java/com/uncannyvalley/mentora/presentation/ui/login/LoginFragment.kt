@@ -1,5 +1,6 @@
 package com.uncannyvalley.mentora.presentation.ui.login
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,6 +16,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
 import com.uncannyvalley.mentora.R
+import androidx.core.content.edit
 
 class LoginFragment : Fragment() {
 
@@ -85,6 +87,9 @@ class LoginFragment : Fragment() {
             val password = passwordEditText.text.toString()
 
             if (viewModel.isEmailValid(email) && viewModel.isPasswordValid(password)) {
+                val prefs = requireContext().getSharedPreferences("app_prefs", Context.MODE_PRIVATE)
+                prefs.edit { putBoolean("is_logged_in", true) }
+
                 findNavController().navigate(R.id.action_navigation_login_to_navigation_home)
             } else {
                 Toast.makeText(
