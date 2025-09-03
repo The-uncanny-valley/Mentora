@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state: round grey ellipse -->
+    <item android:state_checked="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/item_background" />
+            <corners android:radius="32dp"/>
+        </shape>
+    </item>
+
+    <!-- Default state: transparent -->
+    <item>
+        <color android:color="@android:color/transparent"/>
+    </item>
+</selector>
