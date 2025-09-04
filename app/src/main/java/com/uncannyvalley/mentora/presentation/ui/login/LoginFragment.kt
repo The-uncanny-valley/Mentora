@@ -17,6 +17,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
 import com.uncannyvalley.mentora.R
 import androidx.core.content.edit
+import com.uncannyvalley.mentora.presentation.utils.LatinInputFilter
 
 class LoginFragment : Fragment() {
 
@@ -104,6 +105,11 @@ class LoginFragment : Fragment() {
     private fun initViews(view: View) {
         emailEditText = view.findViewById(R.id.edit_text_email)
         passwordEditText = view.findViewById(R.id.edit_text_password)
+
+        val latinFilter = LatinInputFilter()
+
+        emailEditText.filters = arrayOf(latinFilter)
+        passwordEditText.filters = arrayOf(latinFilter)
 
         signInButton = view.findViewById(R.id.btn_login)
 
